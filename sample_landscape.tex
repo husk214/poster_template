@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% From a template maintained at https://github.com/jamesrobertlloyd/cbl-tikz-poster
+%
+% Code near the top should be fairly standard and not need to be changed
+%  - except for the document class
+% Code lower down is more likely to be customised
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[landscape,a0b,final,a4resizeable]{include/a0poster}
+
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{morefloats}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath, amsthm, amssymb, bm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+
+
+\usepackage{include/picins}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,chains,matrix,positioning,scopes,calc}
+\tikzstyle{mybox} = [draw=white, rectangle]
+\definecolor{darkblue}{rgb}{0,0.08,0.45}
+\definecolor{blue}{rgb}{0,0,1}
+
+\usepackage{dsfont}
+\input{include/jlposter.tex}
+\usepackage{include/preamble}
+
+
+
+\begin{document}
+\begin{poster}
+
+% Potentially add some space at the top of the poster
+\vspace{0\baselineskip}
+
+
+
+%%% Header
+% \begin{center}
+\begin{pcolumn}{0.99}
+
+\newcommand{\logowidth}{0.099\textwidth}  % width mauna decomp
+
+\pbox{0.99\textwidth}{}{linewidth=2mm,framearc=0.3,linecolor=camdarkblue,fillstyle=gradient,gradangle=0,gradbegin=white,gradend=white,gradmidpoint=1.0,framesep=1em}{
+%
+%%% Title
+\vspace*{10mm}
+\begin{minipage}[c][11cm][c]{\textwidth}
+  \begin{center}
+    {\sffamily \Huge \textbf{藪の中}}
+    \\[20mm]
+    {\huge John Smith and Ryunosuke Akutagawa (N University, Japan) }
+  \end{center}
+\end{minipage}
+%
+%
+}
+\end{pcolumn}
+% \end{center}
+
+
+
+\large
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Beginning of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{multicols}{3}
+
+\mysection{This Work in A Nutshell}
+John Smith got his forest burned down.
+That's why he planted new trees.
+A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more...
+ A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more... A lot, a whole lot, and a lot more...
+\newpage
+
+\mysection{Abstract}
+John Smith got his forest burned down.
+That's why he planted new trees.
+A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more...
+A lot, a whole lot, and a lot more...
+
+
+\mysection{Problem Setup}
+\begin{itemize}
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+\end{itemize}
+
+
+\mysection{Algorithm}
+\begin{enumerate}
+  \item John Smith got his forest burned down.
+  \item That's why he planted new trees.
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+  \item A lot, a whole lot, and a lot more...
+\end{enumerate}
+
+\mysectiong{Conclusion}
+ The truth is still a mystery.
+
+\end{multicols}
+
+\vspace*{1em}
+
+\begin{multicols}{2}
+\mysectionv{Experimetns}
+John Smith got his forest burned down.
+That's why he planted new trees.
+
+\newpage
+
+\mysectionv{References}
+\begin{description}
+  \item[[1]] 芥川龍之介. 藪の中. 講談社, 2009.
+  \item[[2]] 倉田 英之. R.O.D. 集英社, 2000.
+\end{description}
+
+
+\end{multicols}
+
+
+
+\end{poster}
+
+\end{document}
+
